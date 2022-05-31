@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Input } from 'antd';
 import { web3, evenOddContract } from "./web3";
 
@@ -64,6 +64,7 @@ function App() {
   }
 
   const syncTotalBet = async () => {
+    console.log("syncTotalBet")
     const totalBet = await getTotalBet();
     setTotalBetEven(Number(totalBet[0]));
     setTotalBetOdd(Number(totalBet[1]));
